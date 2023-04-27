@@ -81,8 +81,17 @@ def gusses_game(tries=10):
             print("\ntry bigger\n")
         else:
             print("\nbingooo\n")
+            answer=input(f"\nDo you want to play again?y:n\n")
+            if answer.lower()=="y":
+                gusses_game()
+                
             break
         n+=1
     if n>10:
         print("\nGameOver\n")
+        answer=input(f"\nDo you want to play again?y:n\n")
+        if answer.lower()=="y":
+            gusses_game()
+            
+        
 gusses_game(tries=10)
